@@ -145,15 +145,24 @@ function setUpAudioContext() {
 };
 
 
-window.addEventListener('click', function() {
+function clickOrTouch(){
   setUpAudioContext()
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
   if (overlay.isAnimating) {
       return false;
     }
-    overlay.toggle();
+  overlay.toggle()
+}
+
+window.addEventListener('touchstart', function() {
+  clickOrTouch()
 })
+window.addEventListener('click', function() {
+  clickOrTouch()
+})
+
+
 
 
 
