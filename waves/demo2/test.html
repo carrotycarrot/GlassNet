@@ -1,0 +1,31 @@
+<html>
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>	
+<link rel="stylesheet" href="test.css">
+
+ <body class="demo-6">
+   <h2><div id="output" data-splitting>42</div></h2>
+   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#00c99b" />
+        <stop offset="100%" stop-color="#ff0ea1" />
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#ffd392" />
+        <stop offset="100%" stop-color="#ff3898" />
+      </linearGradient>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#d5ffbd" />
+        <stop offset="100%" stop-color="#5df5d9" />
+      </linearGradient>
+    </defs>
+    <path class="shape-overlays__path"></path>
+    <path class="shape-overlays__path"></path>
+    <path class="shape-overlays__path"></path>
+  </svg>
+ </body>
+ <script src="easings.js"></script>
+ <script src="test.js"></script>
+</html>

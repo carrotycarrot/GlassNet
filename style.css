@@ -4,6 +4,12 @@ body {
   font-size: 5px;
 }
 
+.noscroll {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
 path {
   fill: transparent;
 }

@@ -1,0 +1,41 @@
+body{ 
+  background: black; 
+  color: white;
+  font: 7vw 'Roboto', sans-serif !important;
+  font-weight: 800; padding: 0;margin: 0;
+}
+
+.shape-overlays {
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+
+.demo-6 {
+	--path-fill-1: url(#gradient1);
+	--path-fill-2: url(#gradient2);
+}
+
+
+.shape-overlays__path:nth-of-type(1) {
+        fill: var(--path-fill-1);
+        opacity: 0.4;
+        transition: all 0.2s ease; 
+}
+
+.shape-overlays__path:nth-of-type(2) {
+        fill: var(--path-fill-2);
+        opacity: 0.5;
+        transition: all 1s ease; 
+}
+
+#myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+}

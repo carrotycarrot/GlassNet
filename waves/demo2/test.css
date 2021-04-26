@@ -1,0 +1,60 @@
+body{ 
+  background: black; 
+  color: white;
+  font: 7vw 'Roboto', sans-serif !important;
+  font-weight: 800; padding: 0;margin: 0;
+}
+
+h2{ 
+  width: 98%; 
+  font-size: inherit;
+  text-align: center; 
+  position: absolute;
+  top: 60%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+}
+
+[class^=char]{
+  display: inline-block !important;
+  line-height: 1;
+  transform-origin: bottom;
+}
+
+.shape-overlays {
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+
+.demo-6 {
+	--path-fill-1: url(#gradient1);
+	--path-fill-2: url(#gradient2);
+	--path-fill-3: url(#gradient3);
+}
+
+
+.shape-overlays__path:nth-of-type(1) {
+        fill: var(--path-fill-1);
+        opacity: 0.4;
+        transition: all 0.3s ease; 
+}
+
+.shape-overlays__path:nth-of-type(2) {
+        fill: var(--path-fill-2);
+        opacity: 0.5;
+        transition: all 0.3s ease; 
+}
+
+.shape-overlays__path:nth-of-type(3) {
+        fill: var(--path-fill-3);
+        opacity: 0.3;
+        transition: all 0.3s ease; 
+}
+
+
