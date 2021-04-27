@@ -28,8 +28,6 @@ function initAudioContext(){
   audioContext = window.AudioContext || window.webkitAudioContext;
   analyserNode, frequencyData = new Uint8Array(128);
 
-  updateChars()
-
   // create audio class
   if (audioContext) {
     audioAPI = new audioContext(); // Web Audio API is available.
@@ -99,11 +97,9 @@ class ShapeOverlays {
       var rang = Math.floor( i / this.numPoints * frequencyData.length ); // spread frequencies along num points (from svg)
       var FREQ = frequencyData[ rang ] / 255;
       var freqPercent = this.frequencyPercent(FREQ)
-      //var min = this.points[i] == undefined ? 50 : Math.max(1, this.points[i] - 10 )
-      //var max = this.points[i] == undefined ? 50 : Math.min(99, this.points[i] + 10 )
       var niceShapeValue = this.niceShape(i, this.numPoints, FREQ)
       var value = getRandomInt(Math.min(niceShapeValue, freqPercent), Math.max(niceShapeValue, freqPercent))
-      this.points[i] = value * -1 + 100;//getRandomInt(min, max) + Math.min(100, OFFSET) * -1;
+      this.points[i] = value * -1 + 100;
     }
 
     let str = '';
