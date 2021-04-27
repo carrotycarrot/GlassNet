@@ -1,0 +1,33 @@
+<!-- content accessible at https://carrotycarrot.github.io/GlassNet/waves/demo3 -->
+<html>
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>	
+
+<link rel="stylesheet" href="style.css">
+
+ <body class="demo-6">
+  <!-- video background -->
+  <video autoplay muted loop id="myVideo">
+    <source src="videos/fire.mov" type="video/mp4">
+  </video>
+  <!-- speach to text here -->
+  <h2><div id="output" data-splitting></div></h2>
+  <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+   <defs>
+     <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%"   stop-color="#fcec03" />
+       <stop offset="100%" stop-color="#fc2803" />
+     </linearGradient>
+     <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%"   stop-color="#fcec03" />
+       <stop offset="100%" stop-color="#fc2803" />
+     </linearGradient>
+   </defs>
+   <path class="shape-overlays__path"></path>
+   <path class="shape-overlays__path"></path>
+  </svg>
+ </body>
+ <script src="easings.js"></script>
+ <script src="main_script.js"></script>
+</html>
