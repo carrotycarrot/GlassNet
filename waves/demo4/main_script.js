@@ -32,6 +32,7 @@ function initAudioContext(){
   if (audioContext) {
     audioAPI = new audioContext(); // Web Audio API is available.
   } else { console.log("ERROR") }
+  flag = 1
 }
 
 function getRandomInt(min, max) {
@@ -44,7 +45,7 @@ class ShapeOverlays {
   constructor(elm) {
     this.elm = elm;
     this.path = elm.querySelectorAll('path');
-    this.numPoints = 150;
+    this.numPoints = 60;
     this.duration = 900;
     this.delayPointsArray = [];
     this.delayPointsMax = 300;
@@ -84,7 +85,7 @@ class ShapeOverlays {
 
   niceShape(position, size, freq){
     var peak = size / 2;
-    var peak2 = size / 100;
+    var peak2 = size - peak;
     var multiplier = position / (1 + Math.abs(peak - position))
     var multiplier2 = position / (1 + Math.abs(peak2 - position))
     return Math.min(100, freq * multiplier * multiplier2  * 10)

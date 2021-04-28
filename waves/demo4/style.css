@@ -5,6 +5,12 @@ body{
         font-weight: 800; padding: 0;margin: 0;
 }
 
+.noscroll {
+        margin: 0; 
+        height: 100%; 
+        overflow: hidden
+}
+
 h2{ 
         width: 98%; 
         font-size: inherit;
@@ -32,17 +38,20 @@ h2{
 	--path-fill-2: url(#gradient2);
 }
 
-
 .shape-overlays__path:nth-of-type(1) {
-        fill: var(--path-fill-1);
-        opacity: 0.4;
+        stroke: #f5a462;
+        stroke-opacity: 0.8;
+        stroke-width: 0.5;
+        fill: transparent;
         transition: all 0.2s ease; 
         z-index: 1;
 }
 
 .shape-overlays__path:nth-of-type(2) {
-        fill: var(--path-fill-2);
-        opacity: 0.5;
+        stroke: #f58427;
+        stroke-opacity: 0.8;
+        stroke-width: 0.5;
+        fill: transparent;
         transition: all 1s ease; 
         z-index: 1;
 }
