@@ -45,7 +45,7 @@ class ShapeOverlays {
   constructor(elm) {
     this.elm = elm;
     this.path = elm.querySelectorAll('path');
-    this.numPoints = 60;
+    this.numPoints = 100;
     this.duration = 900;
     this.delayPointsArray = [];
     this.delayPointsMax = 300;
@@ -84,11 +84,19 @@ class ShapeOverlays {
   }
 
   niceShape(position, size, freq){
-    var peak = size / 2;
+    var peak = size / 4;
     var peak2 = size - peak;
-    var multiplier = position / (1 + Math.abs(peak - position))
+    var multiplier = 2* position / (1 + Math.abs(peak - position))
     var multiplier2 = position / (1 + Math.abs(peak2 - position))
-    return Math.min(100, freq * multiplier * multiplier2  * 10)
+    var sign = position % 2 == 0 ? 1 : -1;
+    var modulo = 50 
+    if(position < size/2){
+      modulo += (sign * freq * multiplier)
+    } else {
+      modulo += (sign * freq * multiplier2)
+    }
+    
+    return Math.max(0, Math.min(modulo, 100))
   }
   
   updatePath(time) {
@@ -99,8 +107,8 @@ class ShapeOverlays {
       var FREQ = frequencyData[ rang ] / 255;
       var freqPercent = this.frequencyPercent(FREQ)
       var niceShapeValue = this.niceShape(i, this.numPoints, FREQ)
-      var value = getRandomInt(Math.min(niceShapeValue, freqPercent), Math.max(niceShapeValue, freqPercent))
-      this.points[i] = value * -1 + 100;
+      var value = niceShapeValue//getRandomInt(Math.min(niceShapeValue, freqPercent), Math.max(niceShapeValue, freqPercent))
+      this.points[i] = value;
     }
 
     let str = '';
