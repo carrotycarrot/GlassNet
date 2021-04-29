@@ -1,15 +1,29 @@
+@font-face {
+  font-family: 'Avenir';
+  src: URL('avenirlight.ttf') format('truetype');
+}
+
 body {
-  background-image: url("background.png");
-  background-repeat: no-repeat;
   background-color: #FFFFFF;
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 5px;
+  font-family: 'Avenir';
+}
+
+.wix_text {
+  font-size: 50px;
+  padding-left: 50px;
+  color: #363636;
+}
+
+.calligramma {
+  display: block;
+  margin: auto;
+  width: 50%;
 }
 
 .noscroll {
-    margin: 0; 
-    height: 100%; 
-    overflow: hidden
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
 }
 
 path {
