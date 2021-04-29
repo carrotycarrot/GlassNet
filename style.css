@@ -1,20 +1,22 @@
 @font-face {
   font-family: 'Avenir';
-  src: URL('avenirlight.ttf') format('truetype');
+  src: URL('res/fonts/avenirlight.ttf') format('truetype');
 }
 
 body {
   background-color: #FFFFFF;
-  font-family: 'Avenir';
 }
 
 .wix_text {
+  font-family: 'Avenir';
   font-size: 50px;
   padding-left: 50px;
   color: #363636;
 }
 
 .calligramma {
+  font-family: 'Avenir';
+  font-size: 9px;
   display: block;
   margin: auto;
   width: 50%;
@@ -30,12 +32,6 @@ path {
   fill: transparent;
 }
 
-text {
-  fill: #000000;
+.svg_text {
+  color: #000000;
 }
-
-a {
-  fill: #000000;
-  text-decoration: underline;
-}
-
