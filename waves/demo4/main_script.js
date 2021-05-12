@@ -5,6 +5,47 @@ flag = 1; // flag to not multiply events
 var analyserNode, frequencyData, audioAPI, audioContext, totalEls, allRepeatedEls;
 var recognition;
 
+const dictionary = new Map([['homosexuality', 'omo.gif'], ['gay', 'omo.gif'], ['queer', 'omo.gif'], ['homo', 'omo.gif'], 
+['homosexual', 'omo.gif'], ['rainbow', 'omo.gif']])
+
+function getFileFromWord(word){
+  return dictionary.get(word)
+}
+
+function placeElement(element, x_pos, y_pos) {
+  element.style.position = "absolute";
+  element.style.left = x_pos+'px';
+  element.style.top = y_pos+'px';
+}
+
+function randomPlaceElem(el){
+  windows_width = window.innerWidth;
+  windows_height = window.innerHeight;
+  el_width = el.offsetWidth
+  el_height = el.offsetHeight
+  x = getRandomInt(0, windows_width-el_width)
+  y = getRandomInt(0, windows_height-el_height)
+  placeElement(el, x, y);
+}
+
+var showingElem = false;
+function spawnTopicElem(){
+  if(showingElem)
+    return;
+  showingElem = true;
+  var x = document.createElement("img")
+  x.style.opacity = "70%"
+  x.src = "topics/"+fileName;
+  x.style.width = "500px";
+  x.style.height = "auto";
+  document.getElementById("body").appendChild(x)
+  randomPlaceElem(x)
+  setTimeout(() => { 
+    x.remove(); 
+    showingElem = false
+  }, 3000);
+}
+
 function splitStuff(transcript){
   var div = document.createElement('div');
   div.innerHTML = transcript.innerText != undefined ? transcript.innerText : transcript;
@@ -17,7 +58,6 @@ function splitStuff(transcript){
 }
 
 function updateChars(){
-  
   allRepeatedEls = document.querySelectorAll( OBJ );
   totalEls = allRepeatedEls.length;
 }
@@ -201,6 +241,12 @@ function runSpeechRecognition() {
     var transcript = event.results[last][0].transcript;
     var content = splitStuff(transcript)
     output.innerHTML = content
+
+    //here we update the topic gif
+    fileName = getFileFromWord(transcript.trim())
+    if(fileName != undefined){
+      spawnTopicElem()
+    }
   };
  
   recognition.onend = function() {
