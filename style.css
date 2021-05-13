@@ -35,3 +35,13 @@ path {
 .svg_text {
   color: #000000;
 }
+
+.container_horiz {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_vert {
+  display: flex;
+  flex-direction: column;
+}
