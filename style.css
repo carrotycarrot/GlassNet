@@ -36,6 +36,11 @@ path {
   color: #000000;
 }
 
+.calligramma {
+  width: 320px;
+  height: auto;
+}
+
 .container_horiz {
   display: flex;
   flex-direction: row;
