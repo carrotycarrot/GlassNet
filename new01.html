@@ -9,38 +9,77 @@
 
 	<p class="wix_text">Glass Net</p>
 
-	<div class="calligramma">
+	<div id="calligramma" class="calligramma">
 		<div class="container_vert">
-			<img src="res/vase/0.png">
+			<a href="https://www.example.org/">
+				<img src="res/vase/0.png">
+			</a>
 
 			<div class="container_horiz">
-				<img src="res/vase/1a.png">
-				<img src="res/vase/1b.png">
-				<img src="res/vase/1c.png">
+				<a href="https://www.example.org/">
+					<img src="res/vase/1a.png">
+				</a>
+
+				<a href="https://www.example.org/">
+					<img src="res/vase/1b.png">
+				</a>
+
+				<a href="https://www.example.org/">
+					<img src="res/vase/1c.png">
+				</a>
 			</div>
 
-			<img src="res/vase/2.png">
-			<img src="res/vase/3.png">
+			<a href="https://www.example.org/">
+				<img src="res/vase/2.png">
+			</a>
+
+			<a href="https://www.example.org/">
+				<img src="res/vase/3.png">
+			</a>
+
 
 			<div class="container_horiz">
-				<img src="res/vase/4a.png">
+				<a href="https://www.example.org/">
+					<img src="res/vase/4a.png">
+				</a>
+
 				<div class="container_vert">
-					<img src="res/vase/4b.png">
-					<img src="res/vase/4c.png">
+					<a href="https://www.example.org/">
+						<img src="res/vase/4b.png">
+					</a>
+
+					<a href="https://www.example.org/">
+						<img src="res/vase/4c.png">
+					</a>
+
 					<div class="container_horiz">
-						<img src="res/vase/4d.png">
-						<img src="res/vase/4e.png">
+						<a href="https://www.example.org/">
+							<img src="res/vase/4d.png">
+						</a>
+
+						<a href="https://www.example.org/">
+							<img src="res/vase/4e.png">
+						</a>
 					</div>
 				</div>
 			</div>
-			<img src="res/vase/5.png">
+			<a href="https://www.example.org/">
+				<img src="res/vase/5.png">
 
+			</a>			
 		</div>
-
 </body>
 
-<audio controls autoplay loop>
+<audio id="linkaudio" controls>
 	<source src="res/sounds/glass_breaking.mp3">
 </audio>
+
+<script>
+	document.getElementById("calligramma").addEventListener("click", function () {
+	  document.getElementById("linkaudio").play();
+	  console.log("test")
+	});
+	
+</script>
 
 </html>
