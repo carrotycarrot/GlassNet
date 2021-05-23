@@ -3,6 +3,7 @@
   src: URL('res/fonts/avenirlight.ttf') format('truetype');
 }
 
+
 body {
   background-color: #FFFFFF;
 }
@@ -14,12 +15,20 @@ body {
   color: #363636;
 }
 
+.wrapper {
+  width: 100%;
+  height: 800px;
+  background-color: #FFFFFF;
+}
+
 .calligramma {
   font-family: 'Avenir';
   font-size: 9px;
   display: block;
   margin: auto;
-  width: 50%;
+  overflow: hidden;
+  width: 322px;
+  height: 735px;
 }
 
 .noscroll {
@@ -36,11 +45,6 @@ path {
   color: #000000;
 }
 
-.calligramma {
-  width: 320px;
-  height: auto;
-}
-
 .container_horiz {
   display: flex;
   flex-direction: row;
@@ -49,4 +53,32 @@ path {
 .container_vert {
   display: flex;
   flex-direction: column;
+}
+
+#vase-components {
+  visibility: visible;
+  width: 321;
+  height: 735;
+  position: absolute;
+  margin: auto;
+}
+
+#vase-whole {
+  visibility: hidden;
+  width: 321;
+  height: 735;
+  position: absolute;
+  margin: auto;
+}
+
+canvas {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+hr {
+  border-color: darkmagenta;
 }

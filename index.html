@@ -1,85 +1,95 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="noscroll">
 
 	<p class="wix_text">Glass Net</p>
-
-	<div id="calligramma" class="calligramma">
-		<div class="container_vert">
-			<a href="https://www.venini.com/eu/it/">
-				<img src="res/vase/0.png">
-			</a>
-
-			<div class="container_horiz">
-				<a href="https://www.example.org/">
-					<img src="res/vase/1a.png">
-				</a>
-
-				<a href="https://carrotycarrot.wixsite.com/glassnet/storia/">
-					<img src="res/vase/1b.png">
-				</a>
-
-				<a href="https://carrotycarrot.wixsite.com/glassnet/storia">
-					<img src="res/vase/1c.png">
-				</a>
-			</div>
-
-			<a href="https://carrotycarrot.wixsite.com/glassnet/fasi-di-lavorazione">
-				<img src="res/vase/2.png">
-			</a>
-
-			<a href="https://carrotycarrot.wixsite.com/glassnet/fasi-di-lavorazione">
-				<img src="res/vase/3.png">
-			</a>
-
-
-			<div class="container_horiz">
-				<a href="https://carrotycarrot.wixsite.com/glassnet">
-					<img src="res/vase/4a.png">
-				</a>
-
+	
+	<div class="wrapper">
+		<div id="calligramma" class="calligramma">
+			<div id="vase-whole"></div>
+			<div id=vase-components>
 				<div class="container_vert">
-					<a href="https://carrotycarrot.wixsite.com/glassnet/pubblicita">
-						<img src="res/vase/4b.png">
-					</a>
-
-					<a href="https://carrotycarrot.wixsite.com/glassnet/pubblicita">
-						<img src="res/vase/4c.png">
+					<a href="javascript:delay('https://www.venini.com/eu/it')">
+						<img class="vase-image" src="res/vase/0.png">
 					</a>
 
 					<div class="container_horiz">
-						<a href="https://carrotycarrot.wixsite.com/glassnet/eventi">
-							<img src="res/vase/4d.png">
+						<a href="javascript:delay('https://www.example.org')">
+							<img class="vase-image" src="res/vase/1a.png">
 						</a>
 
-						<a href="https://carrotycarrot.wixsite.com/glassnet/eventi">
-							<img src="res/vase/4e.png">
+						<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/storia')">
+							<img class="vase-image" src="res/vase/1b.png">
+						</a>
+
+						<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/storia')">
+							<img class="vase-image" src="res/vase/1c.png">
 						</a>
 					</div>
-				</div>
-			</div>
-			<a href="https://carrotycarrot.wixsite.com/glassnet">
-				<img src="res/vase/5.png">
 
-			</a>			
+					<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/fasi-di-lavorazione')">
+						<img class="vase-image" src="res/vase/2.png">
+					</a>
+
+					<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/fasi-di-lavorazione')">
+						<img class="vase-image" src="res/vase/3.png">
+					</a>
+
+
+					<div class="container_horiz">
+						<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet')">
+							<img class="vase-image" src="res/vase/4a.png">
+						</a>
+
+						<div class="container_vert">
+							<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/pubblicita')">
+								<img class="vase-image" src="res/vase/4b.png">
+							</a>
+
+							<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/pubblicita')">
+								<img class="vase-image" src="res/vase/4c.png">
+							</a>
+
+							<div class="container_horiz">
+								<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/eventi')">
+									<img class="vase-image" src="res/vase/4d.png">
+								</a>
+
+								<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet/eventi')">
+									<img class="vase-image" src="res/vase/4e.png">
+								</a>
+							</div>
+						</div>
+					</div>
+					<a href="javascript:delay('https://carrotycarrot.wixsite.com/glassnet')">
+						<img class="vase-image" src="res/vase/5.png">
+
+					</a>
+				</div>
+
+			</div>
 		</div>
 </body>
 
-<audio id="linkaudio" autoplay loop controls>
+<audio id="linkaudio">
 	<source src="res/sounds/glass_breaking.mp3">
 </audio>
 
-<!--<script>
+<script>
 	document.getElementById("calligramma").addEventListener("click", function () {
-	  document.getElementById("linkaudio").play();
-	  console.log("test")
+		document.getElementById("linkaudio").play();
 	});
-	
-</script>-->
+
+</script>
+
+<script src="scripts/delaunay.js"></script>
+<script src="scripts/TweenMax.min.js"></script>
+<script src="scripts/01.js"></script>
 
 </html>
