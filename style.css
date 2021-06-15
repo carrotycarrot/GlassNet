@@ -87,3 +87,25 @@ hr {
 img:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
+
+.map_body{
+  background-color: #000000;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 60%;
+  width: 100%;
+  top:180px;
+  left:0;
+  padding-bottom: 100px;
+  position:absolute;
+  margin: 0; 
+}
+
+.submersion {
+  font-family: 'Avenir';
+  font-size: 50px;
+  padding-left: 50px;
+  color: #160f7c;
+}
